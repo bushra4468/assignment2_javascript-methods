@@ -10,23 +10,43 @@ In this Assignment, we use the prototype constructor to add new methods to the A
 
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
-  // Place your code here.
+  res=[]
+  // if (callbackFn==undefined) return res; // error in native map if you dont pass a function
+  for (let i=0; i<this.length; i++) {
+      if (this[i]==undefined) continue;
+      res.push(callbackFn(this[i]));
+  }
+  return res
 };
 
 // FILTER //
 Array.prototype.myFilter = function(callbackFn) {
-  // Place your code here.
+  res=[];
+  for (let i=0; i<this.length;i++) {
+	  if (this[i]==undefined) continue;
+      if (callbackFn(this[i])) res.push(this[i]);
+  }
+  return res
 };
 
 // SOME //
 Array.prototype.mySome = function(callbackFn) {
-  // Place your code here.
+  for (let i=0; i<this.length; i++) {
+      if (this[i]==undefined) continue;
+      if (callbackFn(this[i])) return true;
+  }
+  return false;
 };
 
 // EVERY //
 Array.prototype.myEvery = function(callbackFn) {
-  // Place your code here.
+  for (let i=0; i<this.length; i++){
+      if (this[i]==undefined) continue;
+      if (!callbackFn(this[i])) return false;
+  }
+  return true;
 };
+
 
 // REDUCE //
 Array.prototype.myReduce = function(callbackFn) {
