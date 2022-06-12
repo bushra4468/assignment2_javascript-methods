@@ -10,7 +10,13 @@ In this Assignment, we use the prototype constructor to add new methods to the A
 
 // MAP //
 Array.prototype.myMap = function(callbackFn) {
-  // Place your code here.
+  res=[]
+  // if (callbackFn==undefined) return res; // error in native map if you dont pass a function
+  for (let i=0; i<this.length; i++) {
+      if (this[i]==undefined) continue;
+      res.push(callbackFn(this[i]));
+  }
+  return res
 };
 
 // FILTER //
