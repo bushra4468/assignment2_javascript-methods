@@ -1,7 +1,7 @@
 # Assignment 2 - Javascript-methods
 This repository is the code for Assignment 2 - Javascript-methods.
 
-##Group Members 
+## Group Members 
 1. Ahbab Ashraf - BobtheKebab
 2. Robbie Cha - rchc44
 3. Layla Flight - laylaflight
