@@ -63,5 +63,9 @@ Object.myKeys = function(object) {
 
 // VALUES //
 Object.myValues = function(object) {
-  // Place your code here.
+  var ret = [];
+  for (const i in object) {
+    ret.push(object[i]);
+  }
+  return ret;
 };
