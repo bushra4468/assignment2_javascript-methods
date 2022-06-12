@@ -45,7 +45,11 @@ Array.prototype.myIndexOf = function(searchElement) {
 
 // LASTINDEXOF //
 Array.prototype.myLastIndexOf = function(searchElement) {
-  // Place your code here.
+  var ret = -1;
+  for (let i = 0; i < this.length; i++) {
+    if (this[i] == searchElement) ret = i;
+  }
+  return ret;
 };
 
 // KEYS //
