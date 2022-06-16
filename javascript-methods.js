@@ -49,8 +49,12 @@ Array.prototype.myEvery = function(callbackFn) {
 
 
 // REDUCE //
-Array.prototype.myReduce = function(callbackFn) {
-  
+Array.prototype.myReduce = function(callbackFn, initValue) {
+  let value = initValue;
+  for(let i = 0; i < this.length; i++){
+    value = callbackFn(value, this[i]);
+  }
+  return value;
 };
 
 // INCLUDES //
